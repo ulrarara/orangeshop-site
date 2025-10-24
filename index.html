@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>오렌지샵 · 통합 패키지</title>
+  <meta name="description" content="휴대폰 단가표, 인터넷·IPTV, CCTV, POS, 렌탈, 서빙로봇, 테이블오더" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .shadow-soft { box-shadow: 0 10px 25px rgba(0,0,0,.10); }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+  <!-- Header -->
+  <header class="sticky top-0 bg-white/90 backdrop-blur border-b border-gray-100 z-40">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 bg-black rounded-lg"></div>
+        <span class="font-semibold">오렌지샵 · 통합 패키지</span>
+      </div>
+      <nav class="hidden md:flex gap-4">
+        <a href="#phone" class="text-sm hover:opacity-80">휴대폰</a>
+        <a href="#internet" class="text-sm hover:opacity-80">인터넷·IPTV</a>
+        <a href="#cctv" class="text-sm hover:opacity-80">CCTV</a>
+        <a href="#pos" class="text-sm hover:opacity-80">POS</a>
+        <a href="#rental" class="text-sm hover:opacity-80">렌탈</a>
+        <a href="#robot" class="text-sm hover:opacity-80">서빙로봇</a>
+        <a href="#table" class="text-sm hover:opacity-80">테이블오더</a>
+        <a href="#contact" class="text-sm hover:opacity-80">상담예약</a>
+      </nav>
+      <a href="#contact" class="inline-flex items-center justify-center px-4 py-2 rounded-xl bg-black text-white text-sm font-semibold hover:opacity-90">1분 견적</a>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-10 space-y-12">
+    <!-- Hero -->
+    <section class="py-6">
+      <h1 class="text-3xl md:text-4xl font-extrabold leading-tight">폰·인터넷·POS·CCTV·로봇·테이블오더까지 한 번에.</h1>
+      <p class="text-gray-600 mt-3">가격표는 매일 업데이트, 상담은 카톡으로 15분 컷.</p>
+    </section>
+
+    <!-- 휴대폰 -->
+    <section id="phone" class="scroll-mt-24">
+      <div class="py-6">
+        <h2 class="text-xl font-bold">휴대폰 단가표</h2>
+        <p class="text-gray-600 text-sm mt-1">출고가·지원금·실구매가. (표 연동은 추후 CSV 추가)</p>
+      </div>
+      <div class="border border-gray-200 rounded-2xl p-4 text-sm">
+        <p>예: S24 / iPhone 15 등. (나중에 CSV 표 연결)</p>
+      </div>
+    </section>
+
+    <!-- 인터넷·IPTV -->
+    <section id="internet" class="scroll-mt-24">
+      <div class="py-6">
+        <h2 class="text-xl font-bold">인터넷·IPTV</h2>
+        <p class="text-gray-600 text-sm mt-1">500M/1G, IPTV 결합, 사은품·설치비 안내.</p>
+      </div>
+      <div class="border border-gray-200 rounded-2xl p-4 text-sm">
+        <ul class="list-disc ml-5 space-y-1">
+          <li>500M + IPTV 월 33,000</li>
+          <li>공유기 3개월 무상</li>
+          <li>설치비 27,500</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CCTV -->
+    <section id="cctv" class="scroll-mt-24">
+      <div class="py-6">
+        <h2 class="text-xl font-bold">CCTV</h2>
+        <p class="text-gray-600 text-sm mt-1">채널구성·카메라대수·보증기간.</p>
+      </div>
+      <div class="border border-gray-200 rounded-2xl p-4 text-sm">
+        <ul class="list-disc ml-5 space-y-1">
+          <li>4채널 기준 월 15,000</li>
+          <li>보증 1년</li>
+          <li>원격/방문 AS</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- POS -->
+    <section id="pos" class="scroll-mt-24">
+      <div class="py-6">
+        <h2 class="text-xl font-bold">POS</h2>
+        <p class="text-gray-600 text-sm mt-1">렌탈/구매, 테이블오더/키오스크 연동.</p>
+      </div>
+      <div class="border border-gray-200 rounded-2xl p-4 text-sm">
+        <p>예: POS 기본 / 교육 포함.</p>
+      </div>
+    </section>
+
+    <!-- 렌탈 -->
+    <section id="rental" class="scroll-mt-24">
+      <div class="py-6">
+        <h2 class="text-xl font-bold">렌탈</h2>
+        <p class="text-gray-600 text-sm mt-1">정수기/공기청정 등 월 렌탈료.</p>
+      </div>
+      <div class="border border-gray-200 rounded-2xl p-4 text-sm">
+        <p>예: 정수기 월 19,000, 설치비 0원, 약정 36개월.</p>
+      </div>
+    </section>
+
+    <!-- 서빙로봇 (CSV 연동) -->
+    <section id="robot" class="scroll-mt-24">
+      <div class="py-6">
+        <h2 class="text-xl font-bold">서빙로봇 단가표</h2>
+        <p class="text-gray-600 text-sm mt-1">CSV 파일을 불러와 표로 표시합니다. (data/robot_prices.csv)</p>
+      </div>
+      <div class="border border-gray-200 rounded-2xl p-4 text-sm">
+        <div class="flex items-center justify-between gap-3 mb-3">
+          <input id="robot-q" placeholder="모델 검색 (예: Servi)" class="w-full md:w-64 border border-gray-300 rounded-lg px-3 py-2 text-sm"/>
+          <a class="text-sm underline" href="data/robot_prices.csv" target="_blank">CSV 열기</a>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-sm" id="robot-table">
+            <thead>
+              <tr>
+                <th class="text-left px-3 py-2 bg-gray-50 border-b">모델</th>
+                <th class="text-left px-3 py-2 bg-gray-50 border-b">계약(개월)</th>
+                <th class="text-left px-3 py-2 bg-gray-50 border-b">월렌탈료(원)</th>
+                <th class="text-left px-3 py-2 bg-gray-50 border-b">설치비(원)</th>
+                <th class="text-left px-3 py-2 bg-gray-50 border-b">교육</th>
+                <th class="text-left px-3 py-2 bg-gray-50 border-b">AS</th>
+                <th class="text-left px-3 py-2 bg-gray-50 border-b">이벤트</th>
+                <th class="text-left px-3 py-2 bg-gray-50 border-b">비고</th>
+              </tr>
+            </thead>
+            <tbody id="robot-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 테이블오더 -->
+    <section id="table" class="scroll-mt-24">
+      <div class="py-6">
+        <h2 class="text-xl font-bold">테이블오더</h2>
+        <p class="text-gray-600 text-sm mt-1">POS 연동, 동시 도입 시 교육비 0원.</p>
+      </div>
+      <div class="border border-gray-200 rounded-2xl p-4 text-sm">
+        <p>예: 테이블오더 기본 / 초기비 0 / 월이용료 0 (정책 예시).</p>
+      </div>
+    </section>
+
+    <!-- 상담예약 -->
+    <section id="contact" class="scroll-mt-24">
+      <div class="py-6">
+        <h2 class="text-xl font-bold">상담예약</h2>
+        <p class="text-gray-600 text-sm mt-1">카톡/전화로 빠르게 연결됩니다.</p>
+      </div>
+      <div class="border border-gray-200 rounded-2xl p-4 text-sm grid md:grid-cols-2 gap-4">
+        <a class="px-5 py-3 rounded-xl bg-black text-white text-center font-semibold" href="#">카카오 채널</a>
+        <a class="px-5 py-3 rounded-xl border border-gray-300 text-center font-semibold" href="tel:010-0000-0000">전화걸기</a>
+        <a class="md:col-span-2 underline text-center" href="#">네이버/구글 폼으로 상담 접수</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-gray-100">
+    <div class="max-w-6xl mx-auto px-4 py-8 text-sm text-gray-500 flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+      <div>© 오렌지샵. 사업자정보/연락처/수신거부 표기</div>
+      <div class="flex items-center gap-4">
+        <a href="#contact" class="underline">1분 견적</a>
+        <a href="#" class="underline">카카오 채널</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // 간단 CSV 파서
+    function parseCSV(text){
+      const lines = text.split(/\r?\n/).filter(Boolean);
+      const headers = lines[0].split(',');
+      return lines.slice(1).map(line => {
+        const cols = line.split(',');
+        const obj = {};
+        headers.forEach((h, i) => obj[h.trim()] = (cols[i]||'').trim());
+        return obj;
+      });
+    }
+    function formatKRW(n){
+      const v = Number(String(n).replace(/[^0-9.-]/g,''));
+      return isNaN(v) ? n : v.toLocaleString('ko-KR');
+    }
+
+    // 서빙로봇 표 렌더
+    fetch('data/robot_prices.csv')
+      .then(r=>r.text())
+      .then(t=>{
+        const rows = parseCSV(t);
+        const tbody = document.getElementById('robot-tbody');
+        const q = document.getElementById('robot-q');
+        function draw(filter){
+          tbody.innerHTML='';
+          rows.filter(r => filter ? (r['모델']||'').includes(filter) : true)
+              .forEach(r => {
+                const tr = document.createElement('tr');
+                tr.className='border-b';
+                tr.innerHTML = `
+                  <td class="px-3 py-2">${r['모델']||''}</td>
+                  <td class="px-3 py-2">${r['계약(개월)']||''}</td>
+                  <td class="px-3 py-2">${formatKRW(r['월렌탈료(원)'])}</td>
+                  <td class="px-3 py-2">${formatKRW(r['설치비(원)'])}</td>
+                  <td class="px-3 py-2">${r['교육']||''}</td>
+                  <td class="px-3 py-2">${r['AS']||''}</td>
+                  <td class="px-3 py-2">${r['이벤트']||''}</td>
+                  <td class="px-3 py-2">${r['비고']||''}</td>`;
+                tbody.appendChild(tr);
+              });
+        }
+        draw('');
+        q.addEventListener('input', e => draw(e.target.value));
+      })
+      .catch(()=>{
+        document.getElementById('robot-tbody').innerHTML =
+          '<tr><td class="px-3 py-2" colspan="8">CSV를 불러오지 못했습니다. data/robot_prices.csv를 확인하세요.</td></tr>';
+      });
+  </script>
+</body>
+</html>
